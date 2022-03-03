@@ -1,8 +1,8 @@
-import { Crawler } from './Crawler.js';
+import { Finder } from './Finder.js';
 import {  modalElement, ModalService, ModalState } from './Model.js';
 
 
-class Modal extends Crawler implements ModalService {
+class Modal extends Finder implements ModalService {
     protected _isVisible: ModalState;
 
     constructor(protected modalContainer: Element, protected _modalElements: modalElement[]){

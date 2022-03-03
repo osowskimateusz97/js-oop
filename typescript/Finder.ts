@@ -1,4 +1,4 @@
-import { CrawlerModel, MessageInfo } from './Model.js';
+import { FinderModel, MessageInfo } from './Model.js';
 
 abstract class Validation {
     abstract runValidation<E>(findedElement: E) : MessageInfo; 
@@ -16,7 +16,7 @@ abstract class Validation {
     }
 }
 
-export class Crawler extends Validation implements CrawlerModel{
+export class Finder extends Validation implements FinderModel{
     getElement(element: string): Element{
       const findedElement = document.querySelector(element);
       const isValid = this.valid<Element>(findedElement);

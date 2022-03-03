@@ -24,7 +24,7 @@ export enum MessageInfo {
     TooMany = 'There is too many finded elements!',
 }
 
-export interface CrawlerModel {
+export interface FinderModel {
     getElement(target: string): Element,
     runValidation(findedElement: Element): MessageInfo
 }

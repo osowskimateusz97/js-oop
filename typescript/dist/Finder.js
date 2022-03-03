@@ -31,23 +31,23 @@ var Validation = /** @class */ (function () {
     };
     return Validation;
 }());
-var Crawler = /** @class */ (function (_super) {
-    __extends(Crawler, _super);
-    function Crawler() {
+var Finder = /** @class */ (function (_super) {
+    __extends(Finder, _super);
+    function Finder() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Crawler.prototype.getElement = function (element) {
+    Finder.prototype.getElement = function (element) {
         var findedElement = document.querySelector(element);
         var isValid = this.valid(findedElement);
         if (isValid)
             return findedElement;
     };
-    Crawler.prototype.runValidation = function (findedElement) {
+    Finder.prototype.runValidation = function (findedElement) {
         var msg = MessageInfo.Ok;
         if (!findedElement)
             msg = MessageInfo.NoElement;
         return msg;
     };
-    return Crawler;
+    return Finder;
 }(Validation));
-export { Crawler };
+export { Finder };
