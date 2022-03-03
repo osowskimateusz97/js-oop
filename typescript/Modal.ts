@@ -1,4 +1,4 @@
-import { Crawler } from './Crawler.js';
+import { Crawler } from './Finder.js';
 import {  modalElement, ModalService, ModalState } from './Model.js';
 
 

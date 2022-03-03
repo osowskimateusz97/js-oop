@@ -13,7 +13,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Crawler } from './Crawler.js';
+import { Crawler } from './Finder.js';
 import { ModalState } from './Model.js';
 var Modal = /** @class */ (function (_super) {
     __extends(Modal, _super);
@@ -50,7 +50,7 @@ var Modal = /** @class */ (function (_super) {
         }
         return element;
     };
-    Modal.prototype.createScheleton = function () {
+    Modal.prototype.createSkeleton = function () {
         var _this = this;
         if (!this._modalElements)
             return;
@@ -62,7 +62,7 @@ var Modal = /** @class */ (function (_super) {
     };
     Modal.prototype.render = function () {
         this.hide();
-        this.createScheleton();
+        this.createSkeleton();
     };
     return Modal;
 }(Crawler));
