@@ -1,11 +1,11 @@
 import { Finder } from './Finder.js';
-import {  modalElement, ModalService, ModalState } from './Model.js';
+import {  ModalElement, ModalService, ModalState } from './Model.js';
 
 
 class Modal extends Finder implements ModalService {
     protected _isVisible: ModalState;
 
-    constructor(protected modalContainer: Element, protected _modalElements: modalElement[]){
+    constructor(protected modalContainer: Element, protected _modalElements: ModalElement[]){
         super();
         this.render();
     }
@@ -34,7 +34,7 @@ class Modal extends Finder implements ModalService {
     }
     createSkeleton(){
         if(!this._modalElements) return;
-        this._modalElements.forEach(({ type, description, className }: modalElement)=>{
+        this._modalElements.forEach(({ type, description, className }: ModalElement)=>{
             const element = this.create(type, description, className);
             this.modalContainer.appendChild(element);
         })

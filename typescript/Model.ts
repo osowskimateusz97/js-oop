@@ -14,10 +14,6 @@ export enum ModalState{
     Visible,
 }
 
-export interface validationState {
-    msg: string
-}
-
 export enum MessageInfo {
     Ok = 'OK',
     NoElement = 'There is no such element',
@@ -29,7 +25,7 @@ export interface FinderModel {
     runValidation(findedElement: Element): MessageInfo
 }
 
-export interface modalElement{
+export interface ModalElement{
     type: string,
     description: string,
     className: string[]
