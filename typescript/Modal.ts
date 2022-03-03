@@ -41,7 +41,11 @@ class Modal extends Crawler implements ModalService {
     }
     render(){
         this.hide()
+<<<<<<< HEAD
         this.createSkeleton();
+=======
+        this.createScheleton();
+>>>>>>> c46f7a80a323c124e426124757d577031580b2a2
     }
 }
 export default Modal;
