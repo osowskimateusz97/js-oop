@@ -1,0 +1,43 @@
+*,*::before,*::after{
+    box-sizing:border-box;
+}
+body{
+    overflow-x:hidden;
+}
+.modal{
+    width:500px;
+    height:500px;
+    border:10px;
+    background-color:lightgrey;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:1rem;
+    margin-bottom:2rem;
+    
+}
+.modal-container1 .title{
+    font-size:2rem;
+    text-align:center;
+    padding:2rem;
+}
+.text{
+    font-size:1rem;
+}
+.primary{
+    border:none;
+    background:#1db954;
+    padding:0.6rem 1.8rem;
+    font-size:1.2rem;
+    color:white;
+    border-radius:3px;
+}
+.secondary{
+    background:#ff00d4;
+}
+button{
+    cursor:pointer;
+}
+.hidden{
+    display:none;
+}
