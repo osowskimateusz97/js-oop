@@ -9,8 +9,7 @@ export abstract class Item {
     *[Symbol.iterator]() {
         if(this.pages?.pages instanceof Array){
             for(let i = 0 ;i< this.pages.pages.length; i++){
-                yield this.pages.pages[i];  
-                return new PagesIterable(this, this.pages.pages[i]);
+                yield new PagesIterable(this, this.pages.pages[i]);
             } 
         }
     }
