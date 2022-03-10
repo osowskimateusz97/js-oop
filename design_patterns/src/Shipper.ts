@@ -1,33 +1,31 @@
-import { ShipperStrategy } from "../models/models.js";
-import { AirEastShipper } from "./AirEastShipper.js";
-import { ChicagoSprintShipper } from "./ChicagoSprintShipper.js";
-import { PacificParcelShipper } from "./PacificParcelShipper.js";
+import { ShipperLocation } from "../models/models.js";
 import { ZipCodeValidator } from "./ZipCodeValidator.js";
 
+
+
 export class Shipper {
-    private strategy: ShipperStrategy;
+    private _location: ShipperLocation;
     
     constructor(private fromZipCode: string){
-        this.setStrategy(new AirEastShipper());
+        this.getProperShipper();
+    }
+    get location():ShipperLocation {
+        return this._location;
+    }
+    set location(s: ShipperLocation){
+        this._location = s;
     }
 
-    setStrategy(s: ShipperStrategy): void{
-        this.strategy = s;
-    }
     getProperShipper(): void{
         const validator = new ZipCodeValidator(this.fromZipCode);
-
         if (validator.valid(['4','5','6'])){
-            this.setStrategy(new ChicagoSprintShipper());
+            this.location = ShipperLocation.Chicago;
         }
         else if(validator.valid(['7','8','9'])){
-            this.setStrategy(new PacificParcelShipper());
+            this.location = ShipperLocation.Pacific;
         }
         else {
-            this.setStrategy(new AirEastShipper());
+            this.location = ShipperLocation.AirEast;
         }
-    }
-    getCost(weight: number): number{
-        return this.strategy.getCost(weight);
     }
 }

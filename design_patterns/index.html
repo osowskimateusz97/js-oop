@@ -5,9 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
-    <script type="module" src="./dist/usage.js"></script>
+    <form id="shipmentForm">
+        <label for="fromAddress">
+            fromAddress
+            <input required type="text" id="fromAddress">
+        </label>
+        <label for="toAddress">
+            toAddress
+            <input required type="text" id="toAddress">
+        </label>
+        <label for="weight">
+            weight
+            <input required type="number" id="weight">
+        </label>
+        <label for="fromZipCode">
+            fromZipCode
+            <input required type="text" id="fromZipCode">
+        </label>
+        <label for="toZipCode">
+            toZipCode
+            <input required type="text" id="toZipCode">
+        </label>
+        <label for="fragile">
+            Fragile
+            <input data-type="marks" type="checkbox" id="fragile">
+        </label>
+        <label for="notLeave">
+            Do Not Leave
+            <input data-type="marks" type="checkbox" id="notLeave">
+        </label>
+        <label for="receiptRequested">
+            Return Receipt Requested
+            <input data-type="marks" type="checkbox" id="receiptRequested">
+        </label>
+        <button type="submit">Send</button>
+    </form>
+    <div id="response"></p>
+
+    <script type="module" src="./dist/src/index.js"></script>
 </body>
 </html>

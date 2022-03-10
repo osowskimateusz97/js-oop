@@ -1,7 +1,10 @@
+import { Shipment } from "./Shipment.js";
 export class Client {
-    constructor(gui) {
-        this.gui = gui;
+    constructor(shipment) {
+        this.shipment = shipment;
     }
-    onShip(shipment) {
+    sendOrder() {
+        const shipment = new Shipment(this.shipment);
+        return shipment.send();
     }
 }
