@@ -1,0 +1,16 @@
+{
+    "currencies":[
+        {
+            "currencyType":"US",
+            "rate":1.10
+        },
+        {
+            "currencyType":"ITL",
+            "rate":1.93627
+        },
+        {
+            "currencyType":"PLN",
+            "rate":4.72
+        }
+    ]
+}

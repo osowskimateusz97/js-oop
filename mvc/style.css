@@ -1,0 +1,16 @@
+#root{
+    display:grid;
+    max-width:1200px;
+    background-color:aliceblue;
+    padding:5rem;
+}
+
+label{
+    margin-right:20px;
+}
+input[type="range"]{
+    width:200px;
+}
+.input-container{
+    display:flex;
+}
